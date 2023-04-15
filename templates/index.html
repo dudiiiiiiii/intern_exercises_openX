@@ -1,0 +1,20 @@
+<form action="{{ url_for('predict')}}" method="post">
+  Model choice:
+  <select name="model_choice" id="mocel_choice">
+    <option value="heuristic">Heuristic</option>
+    <option value="lightgbm">LightGBM</option>
+    <option value="tree">Decision Tree</option>
+    <option value="nn">Neural Network</option>
+  </select>
+  <br>
+  Elevation (1800 - 4000):
+  <input name="elevation" type="number" placeholder="Elevation (1800 - 4000)" min="1800" max="4000" width="300px">
+  <br>
+  Distance to Road (0 - 7200):
+  <input name="hor_dist_road" type="number" placeholder="Distance to Road (0 - 7200)" min="0" max="7200" width="300px">
+  <br>
+  Distance to Fire Points (0 - 7200):
+  <input name="hor_dist_fire" type="number" placeholder="Distance to Fire Points (0 - 7200)" min="0" max="7200" width="300px">
+  <br>
+  <input type="submit">
+</form>
